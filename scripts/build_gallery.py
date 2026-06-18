@@ -14,7 +14,7 @@ from __future__ import annotations
 import pathlib
 from urllib.parse import quote
 
-REPO = "everloom-129/clcv115-greece-mythology"
+REPO = "Everloom-129/CLCV115-Greece-Mythology"
 BRANCH = "main"
 SOURCE_DIR = "Tartarus"
 OUTPUT = pathlib.Path("docs/gallery.md")

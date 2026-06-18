@@ -8,9 +8,11 @@ A repo for final project demonstration of *Mythology of Greece and Rome* (CLCV 1
 
 完整文档（剧本设计、图像画廊、课程资料）以 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) 构建，部署在 GitHub Pages：
 
-👉 **https://everloom-129.github.io/clcv115-greece-mythology/**
+👉 **https://everloom-129.github.io/CLCV115-Greece-Mythology/**
 
-> 首次启用：在仓库 **Settings → Pages** 中将 *Source* 设为 **Deploy from a branch**，分支选择 `gh-pages` / `(root)`。首次推送到 `main` 后，CI 会自动创建 `gh-pages` 分支。
+> 首次启用：在仓库 **Settings → Pages → Build and deployment** 中，将 *Source* 设为 **Deploy from a branch**，**Branch** 选择 `gh-pages` / `(root)` 并保存。首次推送到 `main` 后，CI 会自动创建 `gh-pages` 分支。
+>
+> ⚠️ 注意：站点路径区分大小写，须与仓库名一致（`CLCV115-Greece-Mythology`）。
 
 ## 目录 / Category
 

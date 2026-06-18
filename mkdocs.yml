@@ -1,8 +1,9 @@
 site_name: CLCV115 · 古希腊神话项目
 site_description: Mythology of Greece and Rome 课程期末项目文档 —— 剧本设计、AI 图像画廊与课程资料
 site_author: Tony Wang
-repo_url: https://github.com/everloom-129/clcv115-greece-mythology
-repo_name: everloom-129/clcv115-greece-mythology
+site_url: https://everloom-129.github.io/CLCV115-Greece-Mythology/
+repo_url: https://github.com/Everloom-129/CLCV115-Greece-Mythology
+repo_name: Everloom-129/CLCV115-Greece-Mythology
 edit_uri: edit/main/docs/
 
 theme:

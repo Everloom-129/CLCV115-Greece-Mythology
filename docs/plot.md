@@ -2,7 +2,7 @@
 
 本页整理小组在 *Mythology of Greece and Rome* 课程上准备短剧演出的全过程：候选剧目、演出难度分析、分组投票与最终选定剧本。
 
-原始讨论记录见仓库中的 [`GreecePlot.md`](https://github.com/everloom-129/clcv115-greece-mythology/blob/main/GreecePlot.md)。
+原始讨论记录见仓库中的 [`GreecePlot.md`](https://github.com/Everloom-129/CLCV115-Greece-Mythology/blob/main/GreecePlot.md)。
 
 ## 候选剧目
 

@@ -6,6 +6,10 @@
 
 ## [未发布]
 
+### 修复
+- 修正仓库名大小写：图像画廊的 raw 链接、站点 URL 与文档内链接统一为 `Everloom-129/CLCV115-Greece-Mythology`，避免大小写导致的图片加载失败 / 404。
+- `mkdocs.yml` 新增 `site_url`。
+
 ### 新增
 - 搭建 MkDocs Material 文档站点，并通过 GitHub Actions 自动部署到 GitHub Pages。
 - 新增首页、剧本设计、图像画廊、课程资料、更新日志等文档页面。
