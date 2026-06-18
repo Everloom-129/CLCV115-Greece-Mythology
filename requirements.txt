@@ -1,0 +1,2 @@
+# Documentation site dependencies
+mkdocs-material>=9.5
