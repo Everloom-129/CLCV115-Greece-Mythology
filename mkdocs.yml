@@ -1,0 +1,52 @@
+site_name: CLCV115 · 古希腊神话项目
+site_description: Mythology of Greece and Rome 课程期末项目文档 —— 剧本设计、AI 图像画廊与课程资料
+site_author: Tony Wang
+repo_url: https://github.com/everloom-129/clcv115-greece-mythology
+repo_name: everloom-129/clcv115-greece-mythology
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+
+nav:
+  - 首页: index.md
+  - 剧本设计: plot.md
+  - 图像画廊: gallery.md
+  - 课程资料: resources.md
+  - 更新日志: changelog.md
