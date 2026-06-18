@@ -60,17 +60,24 @@ def main() -> None:
         "",
         f"共 {len(images)} 张图像。",
         "",
+        '<div class="greek-divider"></div>',
+        "",
+        '<div class="greek-gallery" markdown>',
+        "",
     ]
 
     for name in images:
         desc = description(name)
         url = raw_url(name)
-        lines.append(f"## {title(desc)}")
+        # 以 <figure> 卡片呈现，配合 extra.css 的网格布局
+        lines.append("<figure markdown>")
+        lines.append(f'  ![{title(desc)}]({url})')
+        lines.append(f"  <figcaption>{title(desc)}</figcaption>")
+        lines.append("</figure>")
         lines.append("")
-        lines.append(f"![{desc}]({url})")
-        lines.append("")
-        lines.append(f"*{desc}*")
-        lines.append("")
+
+    lines.append("</div>")
+    lines.append("")
 
     OUTPUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"Wrote {OUTPUT} with {len(images)} images.")

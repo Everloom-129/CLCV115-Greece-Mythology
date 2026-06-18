@@ -1,10 +1,16 @@
-# CLCV115 古希腊神话项目
+<div class="greek-hero" markdown>
 
-> Mythology of Greece and Rome（CLCV 115）课程期末项目文档站点。
+<div class="greek-hero__greek" markdown>ΜΥΘΟΛΟΓΙΑ · MYTHOLOGY</div>
+
+# CLCV 115 古希腊神话项目
+
+<p class="greek-hero__sub">Mythology of Greece and Rome —— 剧本设计 · 冥界图像画廊 · 课程资料</p>
+
+</div>
+
+> *"Sing, O Muse…"* —— 本项目围绕古希腊神话展开，包含戏剧演出的剧本设计、由 DALL·E 3 生成的冥界（Tartarus）主题图像画廊，以及课程相关的演示文稿与阅读资料。
 >
 > 作者：Tony Wang
-
-本项目围绕古希腊神话展开，包含戏剧演出的剧本设计、由 DALL·E 3 生成的冥界（Tartarus）主题图像画廊，以及课程相关的演示文稿与阅读资料。
 
 ## 项目内容
 
@@ -27,6 +33,8 @@
     记录每一次功能 / 内容的更新。
 
 </div>
+
+<div class="greek-divider"></div>
 
 ## 关于本站点
 

@@ -9,23 +9,27 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: zh
+  font: false
+  icon:
+    logo: material/bank
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep purple
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: 切换到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep purple
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: 切换到浅色模式
   features:
     - navigation.instant
+    - navigation.tabs
     - navigation.tracking
     - navigation.top
     - navigation.footer
@@ -34,6 +38,9 @@ theme:
     - search.suggest
     - search.highlight
     - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition

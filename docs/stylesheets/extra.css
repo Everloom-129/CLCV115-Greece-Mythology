@@ -1,0 +1,300 @@
+/* =============================================================
+   古希腊风格主题 · Ancient Greek theme for MkDocs Material
+   字体 · 配色 · 回纹（Meander）装饰 · 大理石质感
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+
+/* ---------- 设计令牌 ---------- */
+:root {
+  /* 经典希腊配色：大理石 · 爱琴海蓝 · 赤陶红 · 黄金 */
+  --greek-marble:    #f5f1e6;
+  --greek-marble-2:  #ece5d3;
+  --greek-ink:       #2b2620;
+  --greek-aegean:    #1d5b78;   /* 爱琴海蓝 */
+  --greek-aegean-dk: #143f54;
+  --greek-terra:     #b4472d;   /* 赤陶 / 陶器红 */
+  --greek-gold:      #c9a227;   /* 黄金 */
+  --greek-gold-soft: #d9bf6a;
+
+  --greek-display: "Cinzel", "Noto Serif SC", serif;
+  --greek-body:    "EB Garamond", "Noto Serif SC", Georgia, serif;
+
+  /* 回纹（Greek key / meander）边饰，可无缝平铺 */
+  --greek-meander: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 36" width="32" height="36"><path d="M0 32V4H28V24H8V12H20V32H32" fill="none" stroke="%23c9a227" stroke-width="4"/></svg>');
+}
+
+/* ---------- 浅色（大理石 / 羊皮纸） ---------- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        var(--greek-aegean);
+  --md-primary-fg-color--light: var(--greek-aegean);
+  --md-primary-fg-color--dark:  var(--greek-aegean-dk);
+  --md-accent-fg-color:         var(--greek-terra);
+  --md-default-bg-color:        var(--greek-marble);
+  --md-default-fg-color:           rgba(43, 38, 32, 0.92);
+  --md-default-fg-color--light:    rgba(43, 38, 32, 0.62);
+  --md-default-fg-color--lighter:  rgba(43, 38, 32, 0.32);
+  --md-typeset-a-color:         var(--greek-aegean);
+  --md-code-bg-color:           #efe8d6;
+}
+
+/* 大理石纹理背景 */
+[data-md-color-scheme="default"] body {
+  background-color: var(--greek-marble);
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,0.55), transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(201,162,39,0.06), transparent 50%),
+    linear-gradient(180deg, #f7f3ea, #efe7d5);
+  background-attachment: fixed;
+}
+
+/* ---------- 深色（夜 / 黑曜石） ---------- */
+[data-md-color-scheme="slate"] {
+  --md-hue: 30;
+  --md-primary-fg-color:   #11212b;
+  --md-accent-fg-color:    var(--greek-gold);
+  --md-default-bg-color:   #14110d;
+  --md-typeset-a-color:    var(--greek-gold-soft);
+  --md-code-bg-color:      #1d1813;
+}
+[data-md-color-scheme="slate"] body {
+  background-color: #14110d;
+  background-image:
+    radial-gradient(circle at 50% -10%, rgba(201,162,39,0.10), transparent 55%),
+    linear-gradient(180deg, #161209, #0e0b07);
+  background-attachment: fixed;
+}
+[data-md-color-scheme="slate"] {
+  --md-default-fg-color:          rgba(236, 229, 211, 0.90);
+  --md-default-fg-color--light:   rgba(236, 229, 211, 0.62);
+}
+
+/* ---------- 正文排版 ---------- */
+.md-typeset {
+  font-family: var(--greek-body);
+  font-size: 0.84rem;
+  line-height: 1.75;
+  letter-spacing: 0.1px;
+}
+.md-typeset p { text-align: justify; }
+
+/* 标题：Cinzel 罗马 / 希腊石刻风格 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: var(--greek-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--greek-aegean);
+}
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: var(--greek-gold-soft);
+}
+
+/* H1：居中，下缀黄金回纹 */
+.md-typeset h1 {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4em;
+}
+.md-typeset h1::after {
+  content: "";
+  display: block;
+  height: 16px;
+  margin: 0.5rem auto 0;
+  width: min(220px, 60%);
+  background: var(--greek-meander) repeat-x center / auto 16px;
+  opacity: 0.9;
+}
+
+/* H2：左侧赤陶竖线 + 底部细金线 */
+.md-typeset h2 {
+  margin-top: 2.2em;
+  padding-bottom: 0.3rem;
+  padding-left: 0.7rem;
+  border-left: 4px solid var(--greek-terra);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.45);
+}
+
+.md-typeset h3 { color: var(--greek-terra); }
+[data-md-color-scheme="slate"] .md-typeset h3 { color: var(--greek-gold); }
+
+/* 引用块：羊皮纸笺 */
+.md-typeset blockquote {
+  border-left: 4px solid var(--greek-gold);
+  background: rgba(201, 162, 39, 0.07);
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ---------- 顶栏 · 导航 ---------- */
+.md-header {
+  background: linear-gradient(180deg, var(--greek-aegean), var(--greek-aegean-dk));
+  border-bottom: 4px solid var(--greek-gold);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+.md-header__title { font-family: var(--greek-display); letter-spacing: 0.05em; }
+
+.md-tabs {
+  background: var(--greek-aegean-dk);
+  border-bottom: 14px solid transparent;
+  border-image: var(--greek-meander) 36 repeat;
+}
+.md-tabs__link { font-family: var(--greek-display); font-size: 0.66rem; letter-spacing: 0.06em; opacity: 0.9; }
+.md-tabs__link--active,
+.md-tabs__link:hover { opacity: 1; color: var(--greek-gold-soft); }
+
+/* ---------- 链接 ---------- */
+.md-typeset a { text-decoration-color: rgba(201, 162, 39, 0.5); }
+.md-typeset a:hover { color: var(--greek-terra); }
+
+/* ---------- 表格：石碑 ---------- */
+.md-typeset table:not([class]) {
+  border: 1px solid rgba(29, 91, 120, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(43, 38, 32, 0.08);
+}
+.md-typeset table:not([class]) th {
+  background: var(--greek-aegean);
+  color: #f5f1e6;
+  font-family: var(--greek-display);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background: rgba(201, 162, 39, 0.06);
+}
+.md-typeset table:not([class]) tr:hover {
+  background: rgba(180, 71, 45, 0.07);
+}
+
+/* ---------- 提示框 ---------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 6px;
+  border-left-width: 4px;
+}
+.md-typeset .admonition-title { font-family: var(--greek-display); letter-spacing: 0.02em; }
+
+/* ---------- 首页卡片 ---------- */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
+  background: rgba(255, 255, 255, 0.03);
+}
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-4px);
+  border-color: var(--greek-gold);
+  box-shadow: 0 8px 22px rgba(43, 38, 32, 0.16);
+}
+.md-typeset .grid.cards > ul > li > hr { background: var(--greek-gold); }
+
+/* ---------- 英雄横幅（首页） ---------- */
+.greek-hero {
+  margin: -0.6rem 0 2rem;
+  padding: 3.2rem 1.5rem 2.4rem;
+  text-align: center;
+  border-radius: 10px;
+  color: #f5f1e6;
+  background:
+    linear-gradient(rgba(20, 63, 84, 0.82), rgba(15, 45, 60, 0.9)),
+    radial-gradient(circle at 50% 0%, rgba(201, 162, 39, 0.25), transparent 60%),
+    var(--greek-aegean-dk);
+  border: 1px solid rgba(201, 162, 39, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.greek-hero h1 {
+  color: #f7f0db !important;
+  font-size: 2.1rem;
+  margin: 0 0 0.4rem;
+}
+.greek-hero h1::after { display: none; }
+.greek-hero .greek-hero__sub {
+  font-family: var(--greek-body);
+  font-style: italic;
+  font-size: 1rem;
+  opacity: 0.92;
+  margin: 0;
+}
+.greek-hero .greek-hero__greek {
+  font-family: var(--greek-display);
+  letter-spacing: 0.35em;
+  font-size: 0.8rem;
+  color: var(--greek-gold-soft);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* 回纹分隔线，复用于正文 */
+.greek-divider {
+  height: 20px;
+  margin: 2rem auto;
+  width: min(320px, 80%);
+  background: var(--greek-meander) repeat-x center / auto 20px;
+  opacity: 0.85;
+}
+
+/* ---------- 图像画廊 ---------- */
+.greek-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin: 1.5rem 0;
+}
+.greek-gallery figure {
+  margin: 0;
+  background: #fbf8f0;
+  padding: 0.6rem 0.6rem 0.9rem;
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(43, 38, 32, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+[data-md-color-scheme="slate"] .greek-gallery figure { background: #1d1813; }
+.greek-gallery figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(43, 38, 32, 0.28);
+}
+.greek-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+}
+.greek-gallery figcaption {
+  font-family: var(--greek-body);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* ---------- 页脚 ---------- */
+.md-footer-meta { border-top: 4px solid var(--greek-gold); }
+.md-footer { background: var(--greek-aegean-dk); }
+
+/* ---------- 滚动条 ---------- */
+@media (pointer: fine) {
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--greek-aegean);
+    border-radius: 6px;
+    border: 2px solid var(--greek-marble);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--greek-terra); }
+}

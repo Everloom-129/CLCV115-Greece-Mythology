@@ -6,6 +6,13 @@
 
 ## [未发布]
 
+### 新增（古希腊风格美化）
+- 全站换用古希腊视觉主题：大理石 / 羊皮纸底色、爱琴海蓝 + 赤陶红 + 黄金配色，Cinzel + EB Garamond + Noto Serif SC 字体。
+- 新增黄金回纹（Greek key / meander）装饰：标题下缀、导航栏分隔、`.greek-divider` 分隔线。
+- 首页新增英雄横幅（hero），课程资料 / 表格 / 卡片 / 提示框等统一为石碑式样。
+- 图像画廊改为带画框的响应式网格（`scripts/build_gallery.py` 生成 `<figure>` 卡片）。
+- 自定义样式位于 `docs/stylesheets/extra.css`，`mkdocs.yml` 启用 `navigation.tabs` 顶部标签导航。
+
 ### 修复
 - 修正仓库名大小写：图像画廊的 raw 链接、站点 URL 与文档内链接统一为 `Everloom-129/CLCV115-Greece-Mythology`，避免大小写导致的图片加载失败 / 404。
 - `mkdocs.yml` 新增 `site_url`。
